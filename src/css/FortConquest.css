@@ -1,0 +1,60 @@
+
+.regionList{
+    text-align: center;
+    display: flex;
+    margin: 0 auto 0 auto;
+    width: 1200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.fortList{
+    flex: 1 1 40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fort{
+    text-align: center;
+    padding: 15px;
+    flex: 1 1;
+    border: 2px solid black;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fortName{
+    flex: 1 1;
+}
+
+.fort > div{
+    margin: 5px;
+    pading: 5px;
+}
+
+.fortStatus{
+    flex: 1 1;
+    max-width: 100px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: var(--borderRadius);
+}
+
+.fortCountry{
+    flex: 1 1 10px;
+}
+
+.minuteInput{
+    flex: 0 0 50px;
+}
+
+input{
+    width: 100%;
+}

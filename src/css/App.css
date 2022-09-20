@@ -1,0 +1,24 @@
+@import "FortConquest.css";
+
+:root{
+    --borderRadius: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.defaultButton {
+    text-align: center;
+    padding: 3px;
+    margin: 5px;
+    background: beige;
+    border: 1px gray solid;
+    color: black;
+    border-radius: 5px;
+}
+
+.defaultButton:hover{
+    background: greenyellow;
+    color: black;
+}

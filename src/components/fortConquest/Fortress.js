@@ -1,15 +1,12 @@
 import {useState, useRef} from "react";
-import useLogger from "../useLogger";
 import {timeNumToString, minutesToMiliseconds} from "../../commonFunctions";
 import Button from "../common/Button";
-import Countdown from 'react-countdown';
+import Countdown, {zeroPad} from 'react-countdown';
 
 const minuteDifference = 10;
 
-const  countDownRenderer = ({ hours, minutes, seconds, completed }) => {
-    minutes = minutes < 10 ? `0${minutes}` : minutes;
-    seconds = seconds < 10 ? `0${seconds}` : seconds;
-    return <span>{minutes}:{seconds}</span>;
+const  countDownRenderer = ({minutes, seconds}) => {
+    return <span>{zeroPad(minutes)}:{zeroPad(seconds)}</span>;
 };
 
 
@@ -81,9 +78,6 @@ export default function Fortress(props){
             default:
         }
     }
-
-    useLogger("pevnost", fort);
-    const countDownTime = new Date(fort.countdownTime ?? fort.lastMod);
     return (
         <div className={"fort"}>
             <div className={"fortStatus"}>
@@ -92,8 +86,8 @@ export default function Fortress(props){
 
             <div className={"countDown"}>
                 <Countdown
-                    date={countDownTime}
-                    autoStart={true}
+                    date={fort.countdownTime  ?? fort.lastMod}
+                    key={fort.countdownTime ?? fort.lastMod}
                     renderer={countDownRenderer}
                 />
             </div>

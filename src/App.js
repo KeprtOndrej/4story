@@ -14,10 +14,10 @@ export default function App() {
             <BrowserRouter>
                 <GlobalMenu/>
                 <Routes>
-                    <Route path={`${process.env.REACT_APP_ROOT_URL}/`} element={<HomePage />}/>
-                    <Route path={`${process.env.REACT_APP_ROOT_URL}/dobko`} element={<FortConquestPage/>}/>
-                    <Route path={`${process.env.REACT_APP_ROOT_URL}/login`} element={<LoginPage/>}/>
-                    <Route path={`${process.env.REACT_APP_ROOT_URL}/*`} element={<NoPage/>}/>
+                    <Route path={`/`} element={<HomePage />}/>
+                    <Route path={`/dobko`} element={<FortConquestPage/>}/>
+                    <Route path={`/login`} element={<LoginPage/>}/>
+                    <Route path={`/*`} element={<NoPage/>}/>
                 </Routes>
             </BrowserRouter>
         </>
